@@ -370,7 +370,7 @@ class MachineApp {
     }
   };
   
-  _processLlmResponse = (llmResponseData, originalCmjMessages) => {
+  _processLlmResponse = (llmResponseData, originalCmjMessages, suffix) => {
     try {
       console.log('Worker task successful. LLM Response:', llmResponseData);
       if (!llmResponseData || !llmResponseData.length === 0) {
