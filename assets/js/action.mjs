@@ -383,7 +383,7 @@ class MachineApp {
       const lastMessage = originalCmjMessages.at(-1);
       const updatedCmjMessages = [
         ...originalCmjMessages.slice(0, -1),
-        { ...lastMessage, content: lastMessage.content + deassistedText + ' ' + suffix}
+        { ...lastMessage, content: lastMessage.content + ' ' + deassistedText + ' ' + suffix}
       ];
       const updatedPlatoText = CmjToPlatoText(updatedCmjMessages);
       
