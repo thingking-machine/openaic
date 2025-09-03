@@ -377,9 +377,9 @@ class MachineApp {
         throw new Error('LLM response doesnt have a message content.');
       }
       
-      const desoupedText = llmResponseData.content;
+      const desoupedText = llmSoupToText(llmResponseData);
       console.log('Desouped text:', desoupedText);
-      const deassistedText = desoupedText.replace(/^Assistant:\s*/, '').trim();
+      const deassistedText = desoupedText.replace(/^Explanation:\s*/, '').trim();
       const lastMessage = originalCmjMessages.at(-1);
       const updatedCmjMessages = [
         ...originalCmjMessages.slice(0, -1),
