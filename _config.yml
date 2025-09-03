@@ -1,0 +1,38 @@
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - README.md
+  - LICENSE.md
+url: https://thingking-machine.github.io
+baseurl: /openaic
+
+title: Thingking Machine
+description: A machine is a thing. Things can not think. ...but some of them can thingk!
+
+machine:
+  name: Thingking-Machine
+  instructions_file: complete_thingking.md
+  token: openai
+  server: https://localhost:443
+  apiUrl: https://api.openai.com/v1/completions
+
+app:
+  worker_name: oaiapic.js
+
+lm:
+  model: gpt-3.5-turbo-instruct
+  max_tokens: 3000
+  presence_penalty: 0.0
+  frequency_penalty: 0.0
+  temperature: 1.0
+  top_p: 0.95
+
+github_settings:
+  owner: thingking-machine
+  repo: thingking_machine
+  file_name: machina.yaml
+  branch: main
+  token_file: github.txt
